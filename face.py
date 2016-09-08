@@ -25,9 +25,9 @@ while(True):
 	for (x,y,w,h) in faces:
 		img = cv2.rectangle(gray,(x,y),(x+w,y+h),(255,0,0),2)
 		# Esecuzione script bash per invio messaggi su HipChat
+		time.sleep(3)
 		os.system("bash send_message.sh")
                 print "allarme inviato"
-		sleep(5)
 		exit()
 	# Display the resulting frame
 	cv2.imshow('frame',gray)
